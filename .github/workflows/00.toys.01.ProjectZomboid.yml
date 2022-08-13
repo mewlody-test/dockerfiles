@@ -1,0 +1,25 @@
+name: 00.toys.01.ProjectZomboid
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "version"
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: docker/login-action@v2
+        with:
+          username: mewlody
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: bash .sh
+        run: |
+          cd 00.toys/01.ProjectZomboid
+          bash 00.toys.01.ProjectZomboid.sh
