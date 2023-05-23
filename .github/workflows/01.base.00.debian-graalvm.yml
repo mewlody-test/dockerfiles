@@ -1,4 +1,4 @@
-name: 00.toys.00.steamcmd
+name: 01.base.00.debian-graalvm
 
 on:
   workflow_dispatch:
