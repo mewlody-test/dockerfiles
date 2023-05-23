@@ -1,4 +1,4 @@
-name: 01.ansible
+name: 02.ansible
 
 on:
   schedule:
@@ -19,5 +19,5 @@ jobs:
 
       - name: bash .sh
         run: |
-          cd 01.ansible
-          bash 01.ansible.sh
+          cd 02.ansible
+          bash 02.ansible.sh
